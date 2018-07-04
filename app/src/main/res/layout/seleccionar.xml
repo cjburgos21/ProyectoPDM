@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondo2"
+    >
+
+
+    <TextView
+        android:textSize="35sp"
+        android:layout_marginTop="40dp"
+        android:textColor="#848484"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Productos"
+        android:background="@color/colorPrimary"
+        />
+
+    <TextView
+        android:textSize="35sp"
+        android:layout_marginTop="60dp"
+        android:textColor="#848484"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Clientes"
+        android:background="@color/colorPrimary"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:background="@color/colorPrimary"
+        android:text="Facturas"
+        android:textColor="#848484"
+        android:textSize="35sp" />
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>
