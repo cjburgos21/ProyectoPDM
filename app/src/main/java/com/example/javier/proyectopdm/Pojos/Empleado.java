@@ -1,18 +1,21 @@
 package com.example.javier.proyectopdm.Pojos;
 
-public class Clientes {
+public class Empleado {
 
-    int id;
-    String nombre;
+    private int id;
+    private String nombre;
 
-    public Clientes(int id, String nombre){
+
+    public Empleado (int id, String nombre){
         this.id = id;
         this.nombre = nombre;
+
     }
+
 
     public int getId(){return id;}
 
-    public String getNombre() {return nombre;}
+    public String getNombre(){return nombre;}
 
     public void setId(int id){
         this.id = id;
@@ -23,3 +26,4 @@ public class Clientes {
     }
 
 }
+
