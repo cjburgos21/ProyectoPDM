@@ -1,7 +1,7 @@
 package com.example.javier.proyectopdm.Interfaces;
 
-import com.example.javier.proyectopdm.Pojos.Productos;
-import com.example.javier.proyectopdm.Pojos.Usuario;
+import com.example.javier.proyectopdm.Modelos.Productos;
+import com.example.javier.proyectopdm.Modelos.Usuario;
 
 import java.util.List;
 

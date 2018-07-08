@@ -1,19 +1,15 @@
 package com.example.javier.proyectopdm.Adaptadores;
 
 import android.content.Context;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.javier.proyectopdm.Pojos.Productos;
+import com.example.javier.proyectopdm.Modelos.Productos;
 import com.example.javier.proyectopdm.R;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Product_adapter extends RecyclerView.Adapter<Product_adapter.MyViewHolder>{

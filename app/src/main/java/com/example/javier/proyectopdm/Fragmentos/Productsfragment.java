@@ -2,7 +2,6 @@ package com.example.javier.proyectopdm.Fragmentos;
 
 import android.app.Fragment;
 import android.os.Bundle;
-import android.os.RemoteCallbackList;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
@@ -13,7 +12,7 @@ import android.view.ViewGroup;
 
 import com.example.javier.proyectopdm.Adaptadores.Product_adapter;
 import com.example.javier.proyectopdm.Interfaces.adaptador;
-import com.example.javier.proyectopdm.Pojos.Productos;
+import com.example.javier.proyectopdm.Modelos.Productos;
 import com.example.javier.proyectopdm.R;
 
 import java.util.ArrayList;
