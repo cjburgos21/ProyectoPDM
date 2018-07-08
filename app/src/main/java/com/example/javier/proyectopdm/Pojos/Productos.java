@@ -6,15 +6,17 @@ public class Productos {
     private String categoria;
     private String imagen;
     private String nombre;
-    private boolean precio;
+    private float precio;
+    private int __v;
 
-    public Productos(String imagen, String nombre, boolean precio, String categoria, int id){
+    public Productos(String imagen, String nombre, float precio, String categoria, int id, int __v){
 
         this.imagen = imagen;
         this.nombre = nombre;
         this.precio = precio;
         this.categoria = categoria;
         this.id = id;
+        this.__v = __v;
 
     }
 
@@ -22,20 +24,23 @@ public class Productos {
 
     public String getNombre() {return nombre;}
 
-    public boolean getPrecio() {return precio;}
+    public float getPrecio() {return precio;}
 
     public String getCategoria() {return categoria;}
 
     public int getId() {return id;}
 
+    public int get__v() {return __v;}
+
     public void setImagen(String imagen){this.imagen = imagen;}
 
     public void setNombre(String nombre){this.nombre = nombre;}
 
-    public void setPrecio(boolean precio){this.precio = precio;}
+    public void setPrecio(float precio){this.precio = precio;}
 
     public void setCategoria(String categoria){this.categoria = categoria;}
 
     public void setId(int id){this.id = id;}
 
+    public void set__v(int __v){this.__v = __v;}
 }

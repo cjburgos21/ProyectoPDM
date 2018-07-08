@@ -8,15 +8,17 @@ public class Factura {
     private Carrito carrito;
     private Empleado empleado;
     private String estado;
+    private int __v;
 
 
-    public Factura(int i, String fecha, Usuario usuario, Empleado empleado, Carrito carrito, String estado) {
+    public Factura(int i, String fecha, Usuario usuario, Empleado empleado, Carrito carrito, String estado, int __v) {
         this.id = id;
         this.fecha = fecha;
         this.usuario = usuario;
         this.empleado = empleado;
         this.carrito = carrito;
         this.estado = estado;
+        this.__v = __v;
     }
 
     public int getId(){return id;}
@@ -30,6 +32,8 @@ public class Factura {
     public Empleado getEmpleado(){return empleado;}
 
     public String getEstado(){return estado;}
+
+    public int get__v(){return __v;}
 
     public void setId(int id){
         this.id = id;
@@ -54,4 +58,6 @@ public class Factura {
     public void setEstado(String estado){
         this.estado = estado;
     }
+
+    public void set__v(int __v) {this.__v = __v;}
 }

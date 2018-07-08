@@ -21,6 +21,7 @@ import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
+import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -33,10 +34,11 @@ public class Productsfragment extends Fragment {
     private RecyclerView recyclerView;
     private Call<List<Productos>> llamar;
     public static List<Productos> listproduct;
+    public static String token;
     private List<Productos> lista1 = null;
     private String nombre;
     private String imagen;
-    private boolean precio;
+    private float precio;
     private String categoria;
     private int id;
 
@@ -73,11 +75,11 @@ public class Productsfragment extends Fragment {
 
     conexion = retrofit.create(adaptador.class);
 
-    llamar = conexion.listrequest("Bearer" +token);
+    llamar = conexion.productslistrequest("Bearer" +token);
     llamar.enqueue(new Callback<List<Productos>>() {
 
                 @Override
-                public void onResponse(Call<List<Productos>> call, Response<List<Productos>> response){
+                public void onResponse(Call<List<Productos>> llamar, Response<List<Productos>> response){
                 lista1 = response.body();
                 listproduct =  new ArrayList<>();
 
@@ -97,7 +99,6 @@ public class Productsfragment extends Fragment {
                     }
                     else{
                     categoria = lista1.get(i).getCategoria();}
-                    }
 
                     if(lista1.get(i).getImagen() == null){
                     imagen = "Producto sin imagen";
@@ -111,21 +112,23 @@ public class Productsfragment extends Fragment {
                     else{
                     precio = lista1.get(i).getPrecio();}
 
-                    listproduct.add(new Productos(lista1.get(i).getId()
-                            ,nombre
+                    listproduct.add(
+                            new Productos(nombre
                             ,categoria
                             ,imagen
-                            ,precio.get(i).get__v()));
+                            ,precio
+                            ,lista1.get(i).getId()
+                            ,lista1.get(i).get__v()));
                 }
 
                     recyclerView = (RecyclerView) view2.findViewById(R.id.product_recyclerview);
-                    Product_adapter toplayerAdapter= new product_adapter(getContext(), lista1);
+                    Product_adapter product_adapter= new Product_adapter(getContext(), listproduct);
                     recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
                     recyclerView.setAdapter(product_adapter);
 
             }
             @Override
-            public void onFailure(Call<List<Productos>> call, Throwable t){
+            public void onFailure(Call<List<Productos>> llamar, Throwable t){
 
         }
 
