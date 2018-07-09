@@ -1,10 +1,11 @@
 package com.example.javier.proyectopdm.Fragmentos;
 
 import android.app.Fragment;
+import android.os.Build;
 import android.os.Bundle;
-import android.os.RemoteCallbackList;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -13,7 +14,7 @@ import android.view.ViewGroup;
 
 import com.example.javier.proyectopdm.Adaptadores.Product_adapter;
 import com.example.javier.proyectopdm.Interfaces.adaptador;
-import com.example.javier.proyectopdm.Pojos.Productos;
+import com.example.javier.proyectopdm.Modelos.Productos;
 import com.example.javier.proyectopdm.R;
 
 import java.util.ArrayList;
@@ -78,6 +79,7 @@ public class Productsfragment extends Fragment {
     llamar = conexion.productslistrequest("Bearer" +token);
     llamar.enqueue(new Callback<List<Productos>>() {
 
+                @RequiresApi(api = Build.VERSION_CODES.M)
                 @Override
                 public void onResponse(Call<List<Productos>> llamar, Response<List<Productos>> response){
                 lista1 = response.body();
